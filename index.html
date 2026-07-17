@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackbeard's Bounty Slots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage" id="stage">
+
+  <div class="layout">
+    <div class="main-col">
+      <div class="cabinet-header">
+        <button class="sound-toggle" id="soundToggle" type="button">🔊 On</button>
+        <p class="eyebrow">✦ Ye Olde Gamble ✦</p>
+        <h1>Xyrex/Marven <span class="accent">Bounty</span></h1>
+        <p class="sub">Match <em>3 o' the same</em> to claim the treasure</p>
+      </div>
+
+      <audio id="rollSound" src="soundeffect/rolling.mp3" preload="auto"></audio>
+      <audio id="loseSound" src="soundeffect/lossing.mp3" preload="auto"></audio>
+      <audio id="jackpotSound" src="soundeffect/jackpot.mp3" preload="auto"></audio>
+      <audio id=winLayerSound src="soundeffect/win-actually-won (1).mp3"></audio>
+      <audio id=winLayerSound2 src="music/thefatrat-jackpot.mp3"></audio>
+      <audio id="smallWinSound" src="soundeffect/smallwin.mp3" preload="auto"></audio>
+
+      <div class="cabinet">
+        <div class="board-frame">
+          <div class="reels">
+            <div class="reel-window" id="reel0"><div class="symbol">💀</div></div>
+            <div class="reel-window" id="reel1"><div class="symbol">🦜</div></div>
+            <div class="reel-window" id="reel2"><div class="symbol">💰</div></div>
+          </div>
+        </div>
+
+        <div class="status-line" id="status">Yer chest awaits, pull to spin!</div>
+
+        <div class="console">
+          <div class="readout">
+            <div class="k">Doubloons</div>
+            <div class="v" id="credits">500</div>
+          </div>
+          <div class="readout">
+            <div class="k">Wager</div>
+            <div class="v" id="betDisplay">10</div>
+          </div>
+          <div class="bet-row">
+            <button class="bet-btn" id="betDown" aria-label="Decrease bet">−</button>
+            <button class="bet-btn" id="betUp" aria-label="Increase bet">+</button>
+          </div>
+        </div>
+
+        <button class="spin-btn" id="spinBtn">Set Sail</button>
+
+        <div class="lever" id="lever" role="button" tabindex="0" aria-label="Pull lever to spin">
+          <span>or pull</span>
+          <div class="rod"><div class="knob"></div></div>
+        </div>
+      </div>
+
+      <footer class="note">Fan-made concept slot machine</footer>
+    </div>
+
+    <div class="paytable">
+      <h2>Treasure Chart</h2>
+      <ul>
+        <li class="jack"><span class="combo">💀💀💀</span><span class="mult">×100</span></li>
+        <li><span class="combo">🏴‍☠️🏴‍☠️🏴‍☠️</span><span class="mult">×25</span></li>
+        <li><span class="combo">⚓⚓⚓</span><span class="mult">×15</span></li>
+        <li><span class="combo">🦜🦜🦜</span><span class="mult">×10</span></li>
+        <li><span class="combo">💰💰💰</span><span class="mult">×6</span></li>
+        <li><span class="combo">🍺🍺🍺</span><span class="mult">×4</span></li>
+        <li><span class="combo">Any pair</span><span class="mult">×2</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="jackpot-flash" id="jackpotFlash">
+  <div class="banner">
+    <h2>☠ Buried Treasure! ☠</h2>
+    <p>The Chest Be Yours</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
